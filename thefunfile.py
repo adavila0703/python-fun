@@ -73,9 +73,7 @@ def palindrome(wrd):
 # print(palindrome('racecar'))
 
 
-# Hard:
 # Write a Python function to check whether a string is pangram or not.
-#
 # Note : Pangrams are words or sentences containing every letter of the alphabet at least once.
 # For example : "The quick brown fox jumps over the lazy dog"
 
@@ -191,9 +189,7 @@ def almost_there(n):
 # print(almost_there(111))
 
 
-# FIND 33:
 # Given a list of ints, return True if the array contains a 3 next to a 3 somewhere.
-#
 # has_33([1, 3, 3]) → True
 # has_33([1, 3, 1, 3]) → False
 # has_33([3, 1, 3]) → False
@@ -288,7 +284,17 @@ def listcomp():
     print(licomp)
 
 
-# comment
-
+# Reverse a string
 hello = ['reverse']
 # print(list(map(lambda x:x[::-1], hello)))
+
+
+# Unpack 'hello' from this nexted list/dictionary
+d = {'k1': [{'nest_key': ['this is deep', ['hello']]}]}
+# print(d['k1'][0]['nest_key'][1][0])
+
+
+# unpack this hello
+d = {'k1': [1, 2, {'k2': ['this is tricky', {'tough': [1, 2, ['hello']]}]}]}
+
+# print(d["k1"][2]["k2"][1]["tough"][2][0])
