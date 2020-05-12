@@ -1,8 +1,7 @@
 # Write a function that computes the volume of a sphere given its radius.
 def volume_sphere(num):
-    comp = (4 / 3) * (3.14) * (num ** 3)
+    comp = (4 / 3) * 3.14 * (num ** 3)
     return comp
-
 
 # print(str(round(volume_sphere(2), 2)))
 
@@ -43,8 +42,6 @@ def up_low(wrd):
 # Sample List : [1, 2, 3, -4]
 # Expected Output : -24
 multi = 1
-
-
 def list_multi(*args):
     global multi
     for a in args:
