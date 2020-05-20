@@ -3,6 +3,7 @@ def volume_sphere(num):
     comp = (4 / 3) * 3.14 * (num ** 3)
     return comp
 
+
 # print(str(round(volume_sphere(2), 2)))
 
 
@@ -42,6 +43,8 @@ def up_low(wrd):
 # Sample List : [1, 2, 3, -4]
 # Expected Output : -24
 multi = 1
+
+
 def list_multi(*args):
     global multi
     for a in args:
@@ -53,7 +56,7 @@ def list_multi(*args):
 yourlist = [1, 2, 3, -4]
 
 
-# print(list_multi(list(map(list_multi, yourlist))))
+#print(list_multi(list(map(list_multi, yourlist))))
 
 
 # Write a Python function that checks whether a passed in string is palindrome or not.
@@ -73,6 +76,18 @@ def palindrome(wrd):
 # Write a Python function to check whether a string is pangram or not.
 # Note : Pangrams are words or sentences containing every letter of the alphabet at least once.
 # For example : "The quick brown fox jumps over the lazy dog"
+
+def pan(wrds):
+    abc = 'abcdefghijklmnopqrstuvwxyz'
+    li = sorted(wrds.lower())
+    joining = ''.join(li)
+    remov = ''.join(list(dict.fromkeys(joining.strip())))
+    if remov == abc:
+        return True
+    else:
+        return False
+
+#print(pan("The quick brown fox jumps over the lazy dog"))
 
 
 # Make a function where you can filter from a list of numbers of ranges 0 to 1000, numbers which are divisible by
@@ -191,10 +206,31 @@ def almost_there(n):
 # has_33([1, 3, 1, 3]) → False
 # has_33([3, 1, 3]) → False
 
+def checkarr(num):
+    i = 1
+    for n in num:
+        try:
+            if n == 3 and num[i] == 3:
+                return True
+        except:
+            pass
+        i += 1
+    return False
+
+# print(checkarr([3, 0, 3, 3, 0, 0, 3]))
+
 
 # PAPER DOLL: Given a string, return a string where for every character in the original there are three characters
 # paper_doll('Hello') --> 'HHHeeellllllooo'
 # paper_doll('Mississippi') --> 'MMMiiissssssiiippppppiii'
+
+def paper_doll(wrds):
+    word = ''
+    for w in wrds:
+        word += w*3
+    return word
+
+#print(paper_doll('hello'))
 
 
 # BLACKJACK: Given three integers between 1 and 11, if their sum is less than or equal to 21, return their sum. If
@@ -205,6 +241,19 @@ def almost_there(n):
 # SUMMER OF '69: Return the sum of the numbers in the array, except ignore sections of numbers starting with a 6 and
 # extending to the next 9 (every 6 will be followed by at least one 9). Return 0 for no numbers.¶ summer_69([1, 3,
 # 5]) --> 9 summer_69([4, 5, 6, 7, 8, 9]) --> 9 summer_69([2, 1, 6, 9, 11]) --> 14
+
+def summer_69(num):
+    newlist = []
+    for n in num:
+        if n in range(6, 10):
+            pass
+        else:
+            newlist.insert(0, n)
+    return sum(newlist)
+
+
+#print(summer_69([2, 1, 6, 9, 11]))
+
 
 
 # SPY GAME: Write a function that takes in a list of integers and returns True if it contains 007 in order
@@ -218,6 +267,21 @@ def almost_there(n):
 #
 # By convention, 0 and 1 are not prime.
 
+
+# -The only even prime number is 2. All other even numbers can be divided by 2.
+# -If the sum of a number's digits is a multiple of 3, that number can be divided by 3.
+# -No prime number greater than 5 ends in a 5. Any number greater than 5 that ends in a 5 can be divided by 5.
+# -Zero and 1 are not considered prime numbers.
+# -Except for 0 and 1, a number is either a prime number or a composite number. 
+#     A composite number is defined as any number, greater than 1, that is not prime.
+
+def count_primes(num):
+    for n in num:
+        if n % 2 == 1 or n % 3 == 2:
+            num.remove(n)
+    return num
+
+print(count_primes(list(range(0, 1000))))
 
 # PRINT BIG: Write a function that takes in a single letter, and returns a 5x5 representation of that letter¶
 # print_big('a')

@@ -16,3 +16,5 @@ class BankProfile:
     def deposit(self, amount):
         self.balance += amount
 
+
+print("hi")
