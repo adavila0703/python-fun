@@ -268,20 +268,10 @@ def summer_69(num):
 # By convention, 0 and 1 are not prime.
 
 
-# -The only even prime number is 2. All other even numbers can be divided by 2.
-# -If the sum of a number's digits is a multiple of 3, that number can be divided by 3.
-# -No prime number greater than 5 ends in a 5. Any number greater than 5 that ends in a 5 can be divided by 5.
-# -Zero and 1 are not considered prime numbers.
-# -Except for 0 and 1, a number is either a prime number or a composite number. 
-#     A composite number is defined as any number, greater than 1, that is not prime.
-
 def count_primes(num):
-    for n in num:
-        if n % 2 == 1 or n % 3 == 2:
-            num.remove(n)
     return num
 
-print(count_primes(list(range(0, 1000))))
+#print(count_primes(list(range(0, 100))))
 
 # PRINT BIG: Write a function that takes in a single letter, and returns a 5x5 representation of that letter¶
 # print_big('a')
@@ -359,3 +349,4 @@ d = {'k1': [{'nest_key': ['this is deep', ['hello']]}]}
 d = {'k1': [1, 2, {'k2': ['this is tricky', {'tough': [1, 2, ['hello']]}]}]}
 
 # print(d["k1"][2]["k2"][1]["tough"][2][0])
+
