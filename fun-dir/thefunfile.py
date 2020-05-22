@@ -1,3 +1,4 @@
+
 # Write a function that computes the volume of a sphere given its radius.
 def volume_sphere(num):
     comp = (4 / 3) * 3.14 * (num ** 3)
@@ -56,7 +57,7 @@ def list_multi(*args):
 yourlist = [1, 2, 3, -4]
 
 
-#print(list_multi(list(map(list_multi, yourlist))))
+# print(list_multi(list(map(list_multi, yourlist))))
 
 
 # Write a Python function that checks whether a passed in string is palindrome or not.
@@ -87,7 +88,8 @@ def pan(wrds):
     else:
         return False
 
-#print(pan("The quick brown fox jumps over the lazy dog"))
+
+# print(pan("The quick brown fox jumps over the lazy dog"))
 
 
 # Make a function where you can filter from a list of numbers of ranges 0 to 1000, numbers which are divisible by
@@ -217,6 +219,7 @@ def checkarr(num):
         i += 1
     return False
 
+
 # print(checkarr([3, 0, 3, 3, 0, 0, 3]))
 
 
@@ -227,10 +230,11 @@ def checkarr(num):
 def paper_doll(wrds):
     word = ''
     for w in wrds:
-        word += w*3
+        word += w * 3
     return word
 
-#print(paper_doll('hello'))
+
+# print(paper_doll('hello'))
 
 
 # BLACKJACK: Given three integers between 1 and 11, if their sum is less than or equal to 21, return their sum. If
@@ -252,8 +256,7 @@ def summer_69(num):
     return sum(newlist)
 
 
-#print(summer_69([2, 1, 6, 9, 11]))
-
+# print(summer_69([2, 1, 6, 9, 11]))
 
 
 # SPY GAME: Write a function that takes in a list of integers and returns True if it contains 007 in order
@@ -264,14 +267,12 @@ def summer_69(num):
 
 # COUNT PRIMES: Write a function that returns the number of prime numbers that exist up to and including a given number
 # count_primes(100) --> 25
-#
-# By convention, 0 and 1 are not prime.
-
 
 def count_primes(num):
     return num
 
-#print(count_primes(list(range(0, 100))))
+
+# print(count_primes(list(range(0, 100))))
 
 # PRINT BIG: Write a function that takes in a single letter, and returns a 5x5 representation of that letter¶
 # print_big('a')
@@ -350,3 +351,11 @@ d = {'k1': [1, 2, {'k2': ['this is tricky', {'tough': [1, 2, ['hello']]}]}]}
 
 # print(d["k1"][2]["k2"][1]["tough"][2][0])
 
+
+# Write a Python function to find the Max of three numbers. Go to the editor
+def get_max(num):
+    outmax = max(list(num))
+    return outmax
+
+
+# print(get_max([3,4,3,165,2,6,7,2,3,4,6,7,33,22,77,88,99,4,5,6,7,4,6,3,7,3,22,4,5,36,78]))
